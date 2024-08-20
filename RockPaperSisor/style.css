@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    height: 15vh;
+    text-align: center;
+    background-color:aquamarine;
+    font-size: 1.5rem;
+}
+.heading h1{
+    padding-top:2rem;
+    color:brown;
+}
+
+
+
+.rps_pic{
+    margin-inline: 20rem;
+    margin-block: 2rem;
+    display:flex;
+    justify-content:space-around;
+}
+.rps_pic .rps{
+    cursor: pointer;
+    /* border: 1px solid red; */
+    transition:0.5s;
+}
+.rps_pic .rps:hover{
+    /* content:"";
+    opacity:20px; */
+    color:red;
+    font-size: 20px;
+    box-shadow:2px 2px 2px 2px blueviolet;
+}
+.rps img{
+    /* border: 1px solid red; */
+    border-radius: 50%;
+}
+.rps h5{
+    padding-inline: 50px;
+    padding-block: 20px;
+}
+
+
+
+.score_board{
+    margin:4rem;
+    display:flex;
+    justify-content:center;
+    gap:5rem;
+    /* border:2px solid burlywood; */
+}
+
+.score_board .score{
+    border:2px solid peachpuff;
+    padding:10px;
+}
+.score:hover{
+    box-shadow: 2px 2px 2px 2px peachpuff;
+}
+.score h1{
+    color:cadetblue;
+    font-style:oblique;
+}
+.score p{
+    padding-inline: 50%;
+    padding-top: 5px;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+
+.your_turn{
+    /* align-items: center; */
+    text-align:center;
+    color:rgb(111, 197, 108);;
+}
+.your_turn p{
+    font-size: 2rem;
+    background-color: black;
+    display:inline;
+    padding:1rem;
+}
