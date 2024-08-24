@@ -11,27 +11,33 @@ let computerscore = document.getElementById("sys_score");
 
 let draw=()=>{
     // console.log("game is draw");
-    result.innerText="Game is draw";
+    setTimeout(()=>{
+        result.innerText = "Game is draw!";
+    }, 1000);
+
 };
 
 let display_winner=(user_win, rps_Id, com_gen)=>{
     if(user_win){
        user_score++
-        userscore.innerText=user_score;
+        // userscore.innerText=user_score;
         // console.log("You Win");
-        result.innerText=`You win because ${rps_Id} beats ${com_gen} `;
-
+       setTimeout(()=>{
+        result.innerText = `You win because ${rps_Id} beats ${com_gen}! `;
+         userscore.innerText = user_score;
+       }, 1000);
     }else{
         com_score++;
-        computerscore.innerText = com_score;
         // console.log("You Lose");
-        result.innerText = `You win because ${rps_Id} cannot beats ${com_gen} `;
+        setTimeout(()=>{
+            result.innerText = `You lose because ${rps_Id} cannot beats ${com_gen}! `;
+            computerscore.innerText = com_score;
+        }, 1000);
     }
 };
 
 let computerchoice=()=>{
     // console.log("Wait computer is choosing");
-    // result.innerText="Computer is choosing";
     let option = ["rock", "paper", "scissor"];
     let randomNum=Math.floor(Math.random()*3);
     return option[randomNum];
@@ -39,7 +45,11 @@ let computerchoice=()=>{
 
 let playgame = (rps_Id) => {
   console.log(rps_Id, "is clicked okay");
-    let com_gen=computerchoice();
+
+  result.innerText = "Computer is choosing...";
+
+    let com_gen= computerchoice();
+   
     console.log(com_gen, "is computer generated");
 
     if(rps_Id===com_gen){
@@ -54,6 +64,7 @@ let playgame = (rps_Id) => {
             user_win= com_gen==="rock"?flase:true;
         }
         display_winner(user_win, rps_Id, com_gen);
+    //    setTimeout( display_winner(user_win, rps_Id, com_gen), 5000);
     }
     
 };
