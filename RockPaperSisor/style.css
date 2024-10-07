@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 }
+#notification{
+    border:2px solid black;
+    text-align: center;
+    padding:2rem;
+    display:inline;
+    margin:5rem;
+    /* position:absolute; */
+    z-index:1;
+    /* display:none; */
+}
 
 .heading{
     height: 15vh;

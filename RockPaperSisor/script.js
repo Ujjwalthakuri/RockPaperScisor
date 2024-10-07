@@ -1,4 +1,8 @@
 // console.log("Hello World");
+// let noti = document.querySelector("#notification");
+
+// window.confirm("Enjoy Playing the game!");
+
 let user_score=0;
 let com_score=0;
 
